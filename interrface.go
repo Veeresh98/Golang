@@ -52,8 +52,43 @@ func main() {
     r := rect{width: 3, height: 4}
     c := circle{radius: 5}
 
+    measure(r)
+	measure(c)
 
 	
 }
 
 
+
+type done interface{
+	even() int16
+	year() int16
+	fact() int16
+}
+
+type numbers struct{
+	values int16
+}
+type num struct {
+	val int16
+}
+
+func (n numbers) even() int16 {
+	if n.values %2 ==0{
+		fmt.Println("even number :",n.values)
+	}else{
+		fmt.Println("odd numbner :",n.values)
+	}
+}
+
+func (nn num) year() int16  {
+	if nn.val %4 == 0{
+		fmt.Println("leap year")
+	}else{
+		fmt.Println("not a leap year! ")
+	}
+}
+
+func (){
+	
+}

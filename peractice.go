@@ -2,37 +2,31 @@ package main
 
 import "fmt"
 
-type shape interface{
-	area() float32
-	circum() float32
-}
-
-type square struct{
-	length float32
-}
-
-type circle struct{
-	radius float32
-}
-
-func(s square) area() float32{
-	return s.length * s.length
-}
-
-func(c circle) circum() float32{
-	return c.radius * c.radius
-}
-
-func measure(g shape) {
-	fmt.Println(g)
-	fmt.Println(g.area())
-	fmt.Println(g.circum())
-}
-
 func main(){
-	s := square{length : 10.54}
-	c := circle{radius: 10.21}
+	v := 10
+	fmt.Println(v)
 
-	measure(s)
-	measure(c)
+	sum := func (a int , b int) int {
+		return a + b
+	}(12,32)
+
+	fmt.Println(sum)
+
+	 type person struct{
+		 name string
+		 age int
+	 }
+
+	 humans := person{
+		 name : "monkey d luffy",
+		 age :19,
+	 }
+	 fmt.Println("his name " , humans.name, " and age is ", humans.age)
+
+	 s := []int{1,2,3,4,5,6}
+	 fmt.Println(s)
+
+	 for c,d := range s{
+		 fmt.Println(c,d)
+	 }
 }
