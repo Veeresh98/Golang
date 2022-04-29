@@ -1,4 +1,4 @@
-v=2wZqa read -p 'Enter a : ' a
+ read -p 'Enter a : ' a
 
 read -p 'Enter b : ' b
 
